@@ -58,5 +58,5 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "github-actions@github.com"
           git add frontend.deployment.yaml api.deployment.yaml
-          git commit -m "Update images to version ${{ NEW_TAG }}" 
+          git commit -m "Update images to version ${{ NEW_TAG }}"
           git push origin master
