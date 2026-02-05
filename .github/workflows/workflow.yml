@@ -47,7 +47,7 @@ jobs:
         run: |
           eval $(ssh-agent -s)
           ssh-add - <<< "${{ secrets.GH_SSH_KEY }}"
-          git clone git@github.com:patrice3456/infra.git
+          git clone git@github.com:patrice3456700/infra.git
           cd infra/k8s
           NEW_TAG=$(echo $GITHUB_SHA | cut -c1-7)
           # Mettre à jour le déploiement frontend
