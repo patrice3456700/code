@@ -12,10 +12,10 @@ jobs:
         include:
           - name: front
             directory: ./frontend
-            image: dymafr/chap19-front
+            image: patrice3456/chap19-front
           - name: api-node
             directory: ./node-api
-            image: dymafr/chap19-node
+            image: patrice3456/chap19-node
 
     steps:
     - name: Récupérer le code source
