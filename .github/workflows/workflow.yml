@@ -51,9 +51,9 @@ jobs:
           cd infra/k8s
           NEW_TAG=$(echo $GITHUB_SHA | cut -c1-7)
           # Mettre à jour le déploiement frontend
-          sed -i "s|image: patrice3456/chap19-front:.*|image: patrice3456/chap19-front:${ NEW_TAG }|g" infra/k8s/frontend.deployment.yaml
+          sed -i "s|image: patrice3456/chap19-front:.*|image: patrice3456/chap19-front:${ NEW_TAG }|g" frontend.deployment.yaml
           # Mettre à jour le déploiement api
-          sed -i "s|image: patrice3456/chap19-node:.*|image: patrice3456/chap19-node:${ NEW_TAG }|g" infra/k8s/api.deployment.yaml
+          sed -i "s|image: patrice3456/chap19-node:.*|image: patrice3456/chap19-node:${ NEW_TAG }|g" api.deployment.yaml
           # Ajouter les changements au commit
           git config --global user.name "GitHub Actions"
           git config --global user.email "github-actions@github.com"
